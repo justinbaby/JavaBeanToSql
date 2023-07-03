@@ -44,6 +44,8 @@ public class GenerateSqlMapperUtil {
                 sql.append("bigint DEFAULT NULL");
             } else if (param.equals("java.math.BigDecimal")) {
                 sql.append("decimal(12,6) DEFAULT NULL");
+            } else if (param.equals("java.lang.String")) {
+                sql.append("VARCHAR(100) DEFAULT NULL");
             } else {
                 // 根据需要自行修改
                 sql.append("VARCHAR(100) DEFAULT NULL");
